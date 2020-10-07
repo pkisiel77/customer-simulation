@@ -9,7 +9,7 @@ P_przym_exp=0.2;
 r=0;
 Ts=L_kwadr_sesji; str0=Strum/5; str_sr=Strum; 
 for(i=1:1.5*Ts) t=(i-1); STRUM(i)=str0+(str_sr-str0)/Ts*4*t*(1-0.75*t/Ts); end
-plot([1:Ts]*15, STRUM(1:Ts)*60); xlabel('Strumien klientów/min'); 
+plot([1:Ts]*15, STRUM(1:Ts)*60); xlabel('Strumien klientÃ³w/min'); 
 Strum=str0;
 %break;
 %------------------------------------------------------------------- 
@@ -37,9 +37,9 @@ pkwadr=-1; Liczba_kli_w_skl=0; LKLwSKL(1)=0;
 l_obs=0; Asort=Asort0;
 while(nr_ev<11600)  % symulacja sesji
    nr_ev=nr_ev+1; l_obs=l_obs+1; 
-   % ================= przegl¹d kolejki zdarzen ------------
+   % ================= przeglï¿½d kolejki zdarzen ------------
    tm=1.e40; nr_zd_obs=-1; 
-   for(k=1:L_zdarz) % przegl¹d zdarzeñ
+   for(k=1:L_zdarz) % przeglï¿½d zdarzeï¿½
       if(typ_zdarz(k)>0 & t_obs(k)<tm) tm=t_obs(k); nr_zd_obs=k; end
    end    
    if(nr_zd_obs<1) break; end
